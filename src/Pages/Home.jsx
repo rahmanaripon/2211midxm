@@ -5,24 +5,26 @@ import Card from "../Components/Card"
 
 const Home = () => {
 
-    const [store, setStore]   = useState([])
+//     const [store, setStore]   = useState([])
 
 
-    useEffect(() => {
-        fetch("https://dummyjson.com/products")
-            .then((res) => res.json())
-            .then(result=> setStore(result))
-    }, [])
+//     useEffect(() => {
+//         fetch("https://dummyjson.com/products")
+//             .then((res) => res.json())
+//             .then(result=> setStore(result))
+//     }, [])
 
-console.log(store);
+// console.log(store);
    
-  return (
-    <>
-          {
-              store.map(pd => <Card />)
-          }
-    </>
-  );
+//   return (
+//     <>
+//       <div className="flex flex-wrap gap-4 justify-center">
+//         {store?.products?.map((pd) => (
+//           <Card key={pd.id} info={pd} />
+//         ))}
+//       </div>
+//     </>
+//   );
 }
 
 export default Home
