@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom"
 
 const Card = ({ info }) => {
-  const {
-    title,
-    description,
-    images,
-    id,
-    images: { price },
-  } = info
+
+  const {  title, description, images, id, } = info
+  
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -19,9 +15,9 @@ const Card = ({ info }) => {
           <p>{description}</p>
           <div className="card-actions justify-end">
              <button className="btn btn-primary">View Details</button>
-             <link to={`/Products/${id}`}>
+             <Link to={`/Products/${id}`}>
               <button className="btn btn-primary">Add To Cart</button>
-             </link>
+             </Link>
           </div>
         </div>
       </div>

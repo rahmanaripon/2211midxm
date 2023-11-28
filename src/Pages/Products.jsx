@@ -8,7 +8,7 @@ const Products = () => {
   useEffect(() =>{
     fetch("https://dummyjson.com/products")
     .then((res) => res.json())
-    .then((result) => setStore(result));
+    .then((result) => setStore(result.products));
   
     }, [])
   
@@ -16,14 +16,12 @@ const Products = () => {
 
   return (
     <>
-      
-        <div className="flex flex-wrap gap-4 justify-center">
-          {store?.products?.map((pd) => (
-            <Card key={pd.id} info={pd} />
-          ))}
-        </div>
-      </>
-  
+      <div className="flex flex-wrap gap-4 justify-center">
+        {
+          store.result?.products?.map(pd => <Card key={pd.id} info={pd} />)
+        }
+      </div>
+    </>
   );
 };
 
